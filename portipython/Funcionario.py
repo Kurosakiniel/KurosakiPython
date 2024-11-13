@@ -1,9 +1,11 @@
 # encapsulamento
 
+# O encapsulamento ajuda na proteção dos dados, ele ajuda para nao ter alteracoes em outras classes ou ate
+# Na mesma classe
+
 class Funcionario:
 
     def __init__(self, nome, cargo, ValorPorHoraTrabalhada):
-
     
         self.nome = nome
         self.cargo = cargo
@@ -15,12 +17,12 @@ class Funcionario:
     # Usar o @propriety.
 
     @property
-    def salario(self):
+    def salario(self): 
         return self.__salario
 
     @salario.setter
     def salario(self, novo_salarioi):
-        raise ValueError("Impossivel alterar salario de forma direta. Use    a funcao calcularSalario().")
+        raise ValueError("Impossivel alterar salario de forma direta. Use a funcao calcularSalario().")
 
     def registroHorasTrabalhadas(self):
 
@@ -28,5 +30,3 @@ class Funcionario:
     
     def calcularSalario(self):
         self.salario = self.HorasTrabalhadas * self.ValorPorHoraTrabalhada
-
-    
